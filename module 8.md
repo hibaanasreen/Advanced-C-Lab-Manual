@@ -16,23 +16,65 @@ Algorithm:
  
 Program:
 
-//type your code here
-
-
-
+```
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 21:
+        printf("twenty one");
+        break;
+        
+        case 22:
+        printf("twenty two");
+        break;
+        
+        case 23:
+        printf("twenty three");
+        break;
+        
+        case 24:
+        printf("twenty four");
+        break;
+        
+        case 25:
+        printf("twenty five");
+        break;
+        
+        case 26:
+        printf("twenty six");
+        break;
+        
+        case 27:
+        printf("twenty seven");
+        break;
+        
+        case 28:
+        printf("twenty eight");
+        break;
+        
+        case 29:
+        printf("twenty nine");
+        break;
+        
+        default:
+        printf("Greater than 29");
+        break;
+    }
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![WhatsApp Image 2025-04-26 at 11 07 21_71354890](https://github.com/user-attachments/assets/74705c4b-4431-440e-a81f-998bfb943872)
 
 
 Result:
 Thus, the program is verified successfully
+
  
 EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
 Aim:
@@ -47,23 +89,40 @@ Algorithm:
  
 Program:
 
-//type your code here
-
-
-
+```
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    char str[20];
+    scanf("%s",str);
+    int sum=0;
+    for(int j=48;j<=51;j++)
+    {
+        for(int i=0;str[i]!='\0';i++)
+        {
+            if(isdigit(str[i]))
+            {
+                if((int)str[i]==j)
+                {
+                    sum+=1;
+                }
+            }
+        }
+        printf("%d ",sum);
+        sum=0;
+    }
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![Screenshot 2025-04-26 113303](https://github.com/user-attachments/assets/958f9124-2c2c-44fb-9efe-eb5c47e6fbda)
 
 
 Result:
 Thus, the program is verified successfully
+
 
 EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
 Aim:
@@ -84,23 +143,50 @@ Free the memory allocated for each string in s Free the memory allocated for s
  
 Program:
 
-//type your code here
+```
+include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    char arr[50][50];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%s",arr[i]);
+    }
+    if(n==2)
+    {
+        printf("%s %s\n",arr[0],arr[1]);
+        printf("%s %s",arr[1],arr[0]);
+    }
+    else
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                for(int k=0;k<n;k++)
+                {
+                    if(i!=j && j!=k && k!=i)
+                    {
+                        printf("%s %s %s\n",arr[i],arr[j],arr[k]);
+                    }
+                }
+            }
+        }
+    }
+}
 
-
-
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![WhatsApp Image 2025-04-26 at 11 29 15_6e8b9a1f](https://github.com/user-attachments/assets/c3a8bd96-7114-438f-8eb4-1b35e968bd0c)
 
 
 Result:
 Thus, the program is verified successfully
+
  
 EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
 SHOWN BELOW.
@@ -117,23 +203,35 @@ Algorithm:
  
 Program:
 
-//type your code here
-
-
-
+```
+#include<stdio.h>
+int main()
+{
+    int n,min;
+    scanf("%d",&n);
+    for(int i=0;i<2*n-1;i++)
+    {
+        for(int j=0;j<2*n-1;j++)
+        {
+            min=i;
+            if(j<min)min=j;
+            if((2*n-2-i)<min)min=(2*n-2-i);
+            if((2*n-2-j)<min)min=(2*n-2-j);
+            printf("%d ",n-min);
+        }
+         printf("\n");
+       
+    }
+}
+```
 
 Output:
-
-
-//paste your output here
-
-
-
-
+![WhatsApp Image 2025-04-26 at 11 33 22_c5d7e1c6](https://github.com/user-attachments/assets/fc4b5282-c712-4727-af55-e65536f484d7)
 
 
 Result:
 Thus, the program is verified successfully
+
 
 EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
 
@@ -155,20 +253,29 @@ o	Call the square() function and display the result.
 5.	End.
 
 Program:
+```
+#include <stdio.h>
+int square() 
+{
+    int num;
+    scanf("%d", &num);
+    return num * num;
+}
 
-//type your code here
-
+int main() 
+{
+    int result;
+    result = square(); 
+    printf("The square of the number is: %d\n", result);
+    return 0;
+}
+```
 
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![Screenshot 2025-04-26 114558](https://github.com/user-attachments/assets/160c4ffb-1d2c-4215-b6bb-f709c0db61b8)
 
 
 Result:
